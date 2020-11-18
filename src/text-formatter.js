@@ -61,7 +61,7 @@ export class TextFormatter {
 
 	// Subscriber functions
 
-	changeSourceText = (state, oldState) => {
+	changeSourceText(state, oldState) {
 		if (state.sourceText !== oldState.sourceText) {
 			//console.log('SOURCE TEXT CHANGED!');
 
@@ -69,7 +69,7 @@ export class TextFormatter {
 		}
 	};
 
-	changeFontFamily = (state, oldState) => {
+	changeFontFamily(state, oldState) {
 		if (state.fontFamily !== oldState.fontFamily) {
 			//console.log(`FONT FAMILY CHANGED to ${state.fontFamily}!`);
 
@@ -79,7 +79,7 @@ export class TextFormatter {
 
 	// Set up functions that abstract away the effects of changes to state.
 
-	recipeChanged = (sourceText, fontFamily) => {
+	recipeChanged(sourceText, fontFamily) {
 		this.$formattedText.innerHTML = '';
 
 		var textLines = sourceText.split(/\r?\n/);

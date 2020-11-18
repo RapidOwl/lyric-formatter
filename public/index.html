@@ -1,0 +1,93 @@
+<html>
+
+<head>
+	<title>Lyric Formatter</title>
+	<link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1/new.min.css"
+		crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"
+		crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"
+		crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"
+		crossorigin="anonymous" />
+	<link rel="stylesheet" href="./styles/style.css">
+	<!-- <script src="./scripts/global/dom-to-image.min.js"></script>
+	<script src="./scripts/global/file-saver.min.js"></script> -->
+</head>
+
+<body>
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+	<script type="module" src="/_dist_/index.js"></script>
+
+	<header>
+		<h1>Lyric Formatter!</h1>
+	</header>
+
+	<form>
+		<fieldset>
+			<legend>
+				<h3><label for="SourceText">1. Enter some text</label></h3>
+			</legend>
+			<textarea id="SourceText" rows="12" style="width: 100%;">
+Tonight, I'm gonna have myself a real good time
+I feel alive and the world I'll turn it inside out, yeah
+And floating around in ecstasy
+So don't stop me now don't stop me
+'Cause I'm having a good time, having a good time
+
+I'm a shooting star, leaping through the sky
+Like a tiger defying the laws of gravity
+I'm a racing car, passing by like Lady Godiva
+I'm gonna go, go, go
+There's no stopping me</textarea>
+		</fieldset>
+
+		<fieldset class="buttons">
+			<legend>
+				<h3>2. Select a font</h3>
+			</legend>
+			<button type="button" class="font-selector bangers selected" data-font-class="bangers"
+				aria-label="Change font to Bangers">Bangers</button>
+			<button type="button" class="font-selector lobster" data-font-class="lobster"
+				aria-label="Change font to Lobster">Lobster</button>
+			<button type="button" class="font-selector special-elite" data-font-class="special-elite"
+				aria-label="Change font to Special Elite">Special Elite</button>
+		</fieldset>
+
+		<fieldset class="buttons">
+			<legend>
+				<h3><label for="GenerateImage">3. Smash that download button</label></h3>
+			</legend>
+			<button type="button" id="GenerateImage">Download</button>
+		</fieldset>
+	</form>
+
+	<div class="spacer" aria-hidden="true"></div>
+
+	<div id="FormattedTextWrapper" class="formatted-text-wrapper">
+		<article id="FormattedText" class="formatted-text"></article>
+	</div>
+
+	<div class="spacer" aria-hidden="true"></div>
+
+	<span id="SizeMeasurer" class="size-measurer" style="visibility: hidden; position: absolute;"></span>
+
+	<footer>
+		<h3>To Do</h3>
+		<ul>
+			<li>Choose file name when downloading</li>
+			<li>Font colours</li>
+			<li>Background colours</li>
+			<li>Separators</li>
+			<li>Nice borders</li>
+			<li>More fonts</li>
+		</ul>
+		<h3>Find Me on <a href="https://twitter.com/RapidOwl">Twitter</a></h3>
+
+	</footer>
+
+	<!-- <script type="module" src="./scripts/index.js"></script> -->
+</body>
+
+</html>
